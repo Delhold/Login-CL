@@ -52,6 +52,7 @@ public class ServletLogin extends HttpServlet {
             HttpSession session = request.getSession();
             //Seteamos los datos
             session.setAttribute("username", username);
+            //REDIRECCIONA AL HTML
             response.sendRedirect(request.getContextPath() + "/ServletLogin");
         }else {
             response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "no esta autorizado para ingresar al sistema0");
